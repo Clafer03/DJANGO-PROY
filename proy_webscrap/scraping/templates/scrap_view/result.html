@@ -1,0 +1,18 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Offer List</title>
+</head>
+<body>
+    <h1>Product List</h1>
+    {% for d in data %}
+        <p>Product : {{ d.title}}</p>
+        <p>Price : S/.{{ d.price}}</p>
+        <p>Previous price : S/.{{ d.prev_price}}</p>
+        <p>Discount : {{ d.discount}}%</p>
+        <a href="{{ d.site_url}}"><img src="{{ d.img}}" alt="{{ d.title}}" ></a>
+    {% endfor %}
+</body>
+</html>
